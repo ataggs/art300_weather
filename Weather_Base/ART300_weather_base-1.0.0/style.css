@@ -1,0 +1,99 @@
+.degree_symbol:not(:empty)::after {
+    content: "°"
+}
+
+.owm-legend-item{
+    display: none;
+}
+
+#map {
+	width: 600px;
+    height: 600px;
+}
+.box_1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.box_2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.humidity{
+    text-align: center;
+
+}
+.wind{
+    text-align: center;
+}
+.cloud_coverage{
+    text-align: center;
+}
+.air_quality{
+    text-align: center;
+}
+.dew_point{
+    text-align: center;
+}
+.uv_index{
+    text-align: center;
+}
+.background_icon{
+    text-align: center;
+    background-color: #E8E8E8;
+    opacity: 77%;
+    height: 126px;
+    width: 213px; 
+    
+    
+}
+.forecast_for_the_week{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.box_3{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+h1{
+    font-family: benton-modern-display-conden, serif;
+    font-weight: 400;
+    font-style: normal;
+}
+p{
+    font-family: odisseia, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+p1{
+    font-family: benton-modern-display-conden, serif;
+    font-weight: 400;
+    font-style: normal; 
+    font-size: 1.5em;
+}
+p2{
+    font-family: odisseia, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+    text-align: center
+
+}
+h4{
+    font-family: benton-modern-display-conden, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em; 
+}
+p4{
+    font-family: benton-modern-display-conden, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10em;
+}
+p6{
+    font-family: benton-modern-display-conden, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: .5em;
+}

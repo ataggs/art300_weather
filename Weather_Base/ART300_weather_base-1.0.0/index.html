@@ -55,13 +55,18 @@
                         </div>
                     </div>
                     <div class="time"> 
-                        <p>{{time.day}}</p>
-                        <p>{{time.date}}</p>
-                        <p>{{time.hour_12}} : {{time.minute}} {{time.ampm}}</p>
+                        <div class="time_day_word"><h1>{{time.day}}</h1></div>
+                        <div class="hour_min_ampm"><h1>{{time.hour_12}} : {{time.minute}} {{time.ampm}}</h1></div>
                     </div> 
                     <div class="sun_up_down">  
-                        <p>{{current.sunrise}}</p>
-                        <p>{{current.sunset}}</p>
+                        <div class="sunrise_words">
+                            <div class="sunrise_words_sunerise"><h1>Sunrise</h1></div>
+                            <div class="sunrise_words_sunset"><h1>Sunset</h1></div>
+                        </div>
+                        <div class="sunrise_time">
+                            <div class="sunrise_time_sunrise"><h1>{{current.sunrise}}</h1></div>
+                            <div class="sunrise_time_sunset"><h1>{{current.sunset}}</h1></div>
+                        </div>
                     </div>  
                 </div>
                 <div class="columne_2">
@@ -70,15 +75,15 @@
                     <p4 class="degree_symbol">{{current.temp.current}}</p4>
                     </div>
                     <div class="h_l_box">
-                        <p class="degree_symbol">{{current.temp.high}}</p>
-                        <p class="degree_symbol">{{current.temp.low}}</p>
+                        <div class="h_l_box_high"><p class="degree_symbol">{{current.temp.high}}</p></div>
+                        <div class="h_l_box_low"><p class="degree_symbol">{{current.temp.low}}</p></div>
                     </div>
                     <div class="precip_box">
                         <div class="forecast_prep_current_title"><p2>Preicpitation</p2></div>
                         <div class="forecast_prep_current"><p2>{{forecast[0].precip}}</p2></div>
                     </div>
                     <div class="it_feels_like">
-                        <div class="feels_like_title"></div><p2>Feels Like</p2>
+                        <div class="feels_like_title"><p>Feels Like</p></div>
                     </div>
                 </div>
             </div>

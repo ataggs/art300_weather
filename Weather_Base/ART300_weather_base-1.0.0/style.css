@@ -65,6 +65,22 @@ img{
     height: 107px;
     width: 280px; 
     border-radius: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  margin-top: 15px;
+}
+
+.time_day_word{
+    
+    padding-left: 10%;
+}
+.feels_like_title{
+    left: 10%;
+}
+
+.hour_min_ampm{
+    
+    padding-left: 10%;
 }
 
 p18{
@@ -116,8 +132,68 @@ p18{
     text-align: center;
     margin-left: 25%;
     margin-top: 30%;
-  
 }
+
+.time_day_word{
+    padding-top: 10%;
+}
+
+.feels_like_title{
+    padding-left: 10%;
+    padding-top: 2%;
+}
+
+.hour_min_ampm{
+    padding-top: 10%;
+}
+
+.sun_up_down{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 15px;
+}
+
+.sunrise_words{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   
+}
+.sunrise_words_sunerise{
+    padding-left: 15%; 
+    margin-top: -15%;
+}
+
+.sunrise_words_sunset{
+    padding-left: 15%;
+    margin-top: -15%;
+}
+
+.h_l_box_high{
+    padding-top: 15%;
+    padding-left: 10%;
+}
+
+.h_l_box_low{
+    padding-top: 15%;
+    padding-left: 10%;
+}
+
+.sunrise_time_sunrise{
+    padding-left: 15%;
+    margin-top: -25%;
+}
+
+.sunrise_time_sunset{
+    padding-left: 15%;
+    margin-top: -25%;
+}
+
+.sunrise_time{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
 .precip_box{
     background-color: #E8E8E8;
     opacity: 77%;
@@ -168,6 +244,30 @@ p18{
     border-radius: 25%;
     margin-left: 18%;
 }
+
+.current_humidity_number{
+    padding-top: 20%;
+}
+
+.speed_n_direction{
+    padding-top: 10%;
+}
+.current_uv_index_number{
+    padding-top: 20%;
+}
+
+.cloud_coverage_number{
+    padding-top: 20%;
+}
+
+.current_air_number{
+    padding-top: 20%;
+}
+
+.current_dew_point_number{
+    padding-top: 20%;
+}
+
 .forecast_for_the_week{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;

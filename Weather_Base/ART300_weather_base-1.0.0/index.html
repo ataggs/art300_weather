@@ -31,67 +31,96 @@
 
 
 
-        <input placeholder="Enter Your ZIP Code" name="name" id="zip" />
-        <p id="zip_display"></p>
+        
 
 
         <div class="results" id="app">
-            
+            <input placeholder="Enter Your ZIP Code" v-on:input="zipTest" name="name" id="zip" />
+            <p id="zip_display"></p>
+
             <div class="box_1">
                 <div class="columne_1">
-                    <h1>{{location.city}}</h1>
-                    <p>{{location.name}}</p>
-                    <p>{{location.coord.lat}}</p>
-                    <p>{{location.coord.lon}}</p>
-                    <p>{{location.zip}}</p>
-                    <p>{{time.day}}</p>
-                    <p>{{time.date}}</p>
-                    <p>{{time.hour_12}} : {{time.minute}} : {{time.seconds}} {{time.ampm}}</p>
-                    <p>{{current.sunrise}}</p>
-                    <p>{{current.sunset}}</p>
+                    <div class="location_box">
+                        <div class="city_location_box">
+                            <h8>{{city}}</h8>
+                        </div>
+                        <div class="location_detail_rows">
+                            <p>{{location.state}}</p>
+                            <div class="long_n_lat">
+                                <p>{{location.coord.lat}}</p>
+                                <p>{{location.coord.lon}}</p>
+                            </div>
+                            <p>{{location.zip}}</p>   
+                                     
+                        </div>
+                    </div>
+                    <div class="time"> 
+                        <p>{{time.day}}</p>
+                        <p>{{time.date}}</p>
+                        <p>{{time.hour_12}} : {{time.minute}} {{time.ampm}}</p>
+                    </div> 
+                    <div class="sun_up_down">  
+                        <p>{{current.sunrise}}</p>
+                        <p>{{current.sunset}}</p>
+                    </div>  
                 </div>
                 <div class="columne_2">
+                    <div class="temp_number_box">
                     <p>Temperature (F)</p>
                     <p4 class="degree_symbol">{{current.temp.current}}</p4>
-                    <p class="degree_symbol">{{current.temp.high}}</p>
-                    <p class="degree_symbol">{{current.temp.low}}</p>
-                    <p>{{forecast[0].precip}}</p>
+                    </div>
+                    <div class="h_l_box">
+                        <p class="degree_symbol">{{current.temp.high}}</p>
+                        <p class="degree_symbol">{{current.temp.low}}</p>
+                    </div>
+                    <div class="precip_box">
+                        <div class="forecast_prep_current_title"><p2>Preicpitation</p2></div>
+                        <div class="forecast_prep_current"><p2>{{forecast[0].precip}}</p2></div>
+                    </div>
+                    <div class="it_feels_like">
+                        <div class="feels_like_title"></div><p2>Feels Like</p2>
+                    </div>
                 </div>
             </div>
-            <h1>Description</h1>
+            <div class="description"><h1>Description</h1></div>
             <div class="box_2">
                 <div class="humidity">
                     <p>Humidity</p>
-
+                    <div class="background_icon">
+                        <div class="current_humidity_number"><p2>{{current.humidity}}</p2></div>
+                    </div>
                 </div>
                 <div class="wind">
                     <p>Wind</p>
                     <div class="background_icon">
-                        <p2>{{hourly[0].windDirection}}</p2>
-                        <p2>{{current.wind.speed}}</p2>
+                        <div class="speed_n_direction">
+                            <div class="current_wind_direction_letter"><p2>{{hourly[0].windDirection}}</p2></div>
+                            <div class="current_wind_speed_number"><p2>{{current.wind.speed}}</p2></div>
+                        </div>
                     </div>
                 </div>
                 <div class="cloud_coverage">
                     <p>Cloud Coverage</p>
                     <div class="background_icon">
-                        
-                        <p2>{{current.description_long}}</p2>
+                        <div class="cloud_coverage_number"><p2>{{current.description_long}}</p2></div>
                     </div>
                 </div>
                 <div class="air_quality">
                     <p>Air Quality</p>
-
+                    <div class="background_icon">  
+                        <div class="current_air_number"><p2>{{current.air_quality}}</p2></div>
+                    </div>
                 </div>
                 <div class="dew_point">
                     <p>Dew Point</p>
                     <div class="background_icon">
-                        <p2>{{forecast[0].dewpt}}</p2>
+                        <div class="current_dew_point_number"><p2>{{forecast[0].dewpt}}</p2></div>
                     </div>
                 </div>
                 <div class="uv_index">
                     <p>UV Index</p>
                     <div class="background_icon">
-                        <p2>{{forecast[0].uv}}</p2>
+                        <div class="current_uv_index_number"><p2>{{forecast[0].uv}}</p2></div>
                     </div>
                 </div>
             </div>
@@ -99,127 +128,208 @@
             <div class="forecast_for_the_week">
                 <div class="days_in_the_week">
                     <h4>Day 1</h4>
-                    <h4  class="degree_symbol">{{forecast[0].max_temp}}</h4>
-                    <h4  class="degree_symbol">{{forecast[0].min_temp}}</h4>
-                    <div class="four_space_grib">
-                        <div class="grib_space_1">
-                            <p6>Cloud Coverage</p6>
-                            <p>{{current.cloud_cover}}</p>
+                    <div class="high_n_low_forecast">
+                        <h6  class="degree_symbol">{{forecast[0].max_temp}}</h6>
+                        <h5  class="degree_symbol">{{forecast[0].min_temp}}</h5>
+                    </div>
+                    <div class="icon">
+                        <img v-bind:src="'/img/'+forecast[0].description_icon+'.png'" v-bind:alt="forecast[0].weather.description">
+                    </div>
+                    <div class="four_space_grid">
+                        <div class="grid_space_1">
+                            <div class="cloud_coverage_forecast">
+                                <p6>Cloud Coverage</p6>
+                                <p>{{current.cloud_cover}}</p>
+                            </div>
+                            <div class="visibility_forecast">
+                                <p6>Visibility</p6>   
+                                <p>{{forecast[0].vis}}</p>
+                            </div>             
                         </div>
-                        <div class="grib_space_1">
-                            <p6>Humidity</p6>
-                            
-                        </div>
-                        <div class="grib_space_2">
-                            <p6>Precipitation</p6>
-                            <p>{{forecast[0].precip}}</p>
-                        </div>
-                        <div class="grib_space_3">
-                            <p6>UV Index</p6>
-                            <p>{{forecast[0].uv}}</p>
+                        <div class="grid_space_2">
+                            <div class="precipitation_forecast">
+                                <p6>Precipitation</p6>
+                                <p>{{forecast[0].precip}}</p>
+                            </div>
+                            <div class="uv_index_forecast">
+                                <p6>UV Index</p6>
+                                <p>{{forecast[0].uv}}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="days_in_the_week">
                     <h4>Day 2</h4>
-                    <p  class="degree_symbol">High - {{forecast[1].max_temp}}</p>
-                    <p  class="degree_symbol">Low - {{forecast[1].min_temp}}</p>
-                    <p>{{current.cloud_cover}}</p>
-                   
-                    <p>{{forecast[1].precip}}</p>
-                    <p>{{forecast[1].uv}}</p>
-                  
+                    <div class="high_n_low_forecast">
+                        <h6  class="degree_symbol">{{forecast[1].max_temp}}</h6>
+                        <h5  class="degree_symbol">{{forecast[1].min_temp}}</h5>
+                    </div>
+                    <div class="icon">
+                        <img v-bind:src="'/img/'+forecast[1].description_icon+'.png'" v-bind:alt="forecast[1].weather.description">
+                    </div>
+                    <div class="four_space_grid">
+                        <div class="grid_space_1">
+                            <div class="cloud_coverage_forecast">
+                                <p6>Cloud Coverage</p6>
+                                <p>{{current.cloud_cover}}</p>
+                            </div>
+                            <div class="visibility_forecast">
+                                <p6>Visibility</p6>   
+                                <p>{{forecast[1].vis}}</p>
+                            </div>             
+                        </div>
+                        <div class="grid_space_2">
+                            <div class="precipitation_forecast">
+                                <p6>Precipitation</p6>
+                                <p>{{forecast[1].precip}}</p>
+                            </div>
+                            <div class="uv_index_forecast">
+                                <p6>UV Index</p6>
+                                <p>{{forecast[1].uv}}</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="days_in_the_week">
                     <h4>Day 3</h4>
-                    <p  class="degree_symbol">High - {{forecast[2].max_temp}}</p>
-                    <p  class="degree_symbol">Low - {{forecast[2].min_temp}}</p>
-                    <p>{{current.cloud_cover}}</p>
-                   
-                    <p>{{forecast[2].precip}}</p>
-                    <p>{{forecast[2].uv}}</p>
-                    
+                    <div class="high_n_low_forecast">
+                        <h6  class="degree_symbol">{{forecast[2].max_temp}}</h6>
+                        <h5  class="degree_symbol">{{forecast[2].min_temp}}</h5>
+                    </div>
+                    <div class="icon">
+                        <img v-bind:src="'/img/'+forecast[2].description_icon+'.png'" v-bind:alt="forecast[2].weather.description">
+                    </div>
+                    <div class="four_space_grid">
+                        <div class="grid_space_1">
+                            <div class="cloud_coverage_forecast">
+                                <p6>Cloud Coverage</p6>
+                                <p>{{current.cloud_cover}}</p>
+                            </div>
+                            <div class="visibility_forecast">
+                                <p6>Visibility</p6>   
+                                <p>{{forecast[2].vis}}</p>
+                            </div>            
+                        </div>
+                        <div class="grid_space_2">
+                            <div class="precipitation_forecast">
+                                <p6>Precipitation</p6>
+                                <p>{{forecast[2].precip}}</p>
+                            </div>
+                            <div class="uv_index_forecast">
+                                <p6>UV Index</p6>
+                                <p>{{forecast[2].uv}}</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="days_in_the_week">
                     <h4>Day 4</h4>
-                    <p  class="degree_symbol">High - {{forecast[3].max_temp}}</p>
-                    <p  class="degree_symbol">Low - {{forecast[3].min_temp}}</p>
-                    <p>{{current.cloud_cover}}</p>
-                   
-                    <p>{{forecast[3].precip}}</p>
-                    <p>{{forecast[3].uv}}</p>
-                    
+                    <div class="high_n_low_forecast">
+                        <h6  class="degree_symbol">{{forecast[3].max_temp}}</h6>
+                        <h5  class="degree_symbol">{{forecast[3].min_temp}}</h5>
+                    </div>
+                    <div class="icon">
+                        <img v-bind:src="'/img/'+forecast[3].description_icon+'.png'" v-bind:alt="forecast[3].weather.description">
+                    </div>
+                    <div class="four_space_grid">
+                        <div class="grid_space_1">
+                            <div class="cloud_coverage_forecast">
+                                <p6>Cloud Coverage</p6>
+                                <p>{{current.cloud_cover}}</p>
+                            </div>
+                            <div class="visibility_forecast">
+                                <p6>Visibility</p6>   
+                                <p>{{forecast[3].vis}}</p>
+                            </div>           
+                        </div>
+                        <div class="grid_space_2">
+                            <div class="precipitation_forecast">
+                                <p6>Precipitation</p6>
+                                <p>{{forecast[3].precip}}</p>
+                            </div>
+                            <div class="uv_index_forecast">
+                                <p6>UV Index</p6>
+                                <p>{{forecast[3].uv}}</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="days_in_the_week">
                     <h4>Day 5</h4>
-                    <p  class="degree_symbol">High - {{forecast[4].max_temp}}</p>
-                    <p  class="degree_symbol">Low - {{forecast[4].min_temp}}</p>
-                    <p>{{current.cloud_cover}}</p>
-                   
-                    <p>{{forecast[4].precip}}</p>
-                    <p>{{forecast[4].uv}}</p>
-                    
+                    <div class="high_n_low_forecast">
+                        <h6  class="degree_symbol">{{forecast[4].max_temp}}</h6>
+                        <h5  class="degree_symbol">{{forecast[4].min_temp}}</h5>
+                    </div>
+                    <div class="icon">
+                        <img v-bind:src="'/img/'+forecast[4].description_icon+'.png'" v-bind:alt="forecast[4].weather.description">
+                    </div>
+                    <div class="four_space_grid">
+                        <div class="grid_space_1">
+                            <div class="cloud_coverage_forecast">
+                                <p6>Cloud Coverage</p6>
+                                <p>{{current.cloud_cover}}</p>
+                            </div>
+                            <div class="visibility_forecast">
+                                <p6>Visibility</p6>   
+                                <p>{{forecast[4].vis}}</p>
+                            </div>             
+                        </div>
+                        <div class="grid_space_2">
+                            <div class="precipitation_forecast">
+                                <p6>Precipitation</p6>
+                                <p>{{forecast[4].precip}}</p>
+                            </div>
+                            <div class="uv_index_forecast">
+                                <p6>UV Index</p6>
+                                <p>{{forecast[4].uv}}</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="days_in_the_week">
                     <h4>Day 6</h4>
-                    <p  class="degree_symbol">High - {{forecast[5].max_temp}}</p>
-                    <p  class="degree_symbol">Low - {{forecast[5].min_temp}}</p>
-                    
-                    <p>{{current.cloud_cover}}</p>
-                 
-                    <p>{{forecast[5].precip}}</p>
-                    <p>{{forecast[5].uv}}</p>
-                    
+                    <div class="high_n_low_forecast">
+                        <h6  class="degree_symbol">{{forecast[5].max_temp}}</h6>
+                        <h5  class="degree_symbol">{{forecast[5].min_temp}}</h5>
+                    </div>
+                    <div class="icon">
+                        <img v-bind:src="'/img/'+forecast[5].description_icon+'.png'" v-bind:alt="forecast[5].weather.description">
+                    </div>
+                    <div class="four_space_grid">
+                        <div class="grid_space_1">
+                            <div class="cloud_coverage_forecast">
+                                <p6>Cloud Coverage</p6>
+                                <p>{{current.cloud_cover}}</p>
+                            </div>
+                            <div class="visibility_forecast">
+                                <p6>Visibility</p6>   
+                                <p>{{forecast[5].vis}}</p>
+                            </div>             
+                        </div>
+                        <div class="grid_space_2">
+                            <div class="precipitation_forecast">
+                                <p6>Precipitation</p6>
+                                <p>{{forecast[5].precip}}</p>
+                            </div>
+                            <div class="uv_index_forecast">
+                                <p6>UV Index</p6>
+                                <p>{{forecast[5].uv}}</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="box_3">
             <div class="radar">
-                <p>Radar</p>
+                <h1>Radar</h1>
                 <div id="map"></div>
             </div>
             <div class="Weather Alerts">
-                <p>Weather Alerts</p>
+                <h1>Weather Alerts</h1>
             </div>
         </div>
 
-
-        <h1>META</h1>
-
-            <p>{{error}}</p>
-
-
-                                        <h1>CURRENT</h1>
-                                        <p>{{current.description_main}}</p>
-                                    
-                                        <p>{{current.description_icon}}</p>
-
-                                        <p>{{forecast[0].snow}}</p>
-                                        <p>{{forecast[0].vis}}</p>
-                                        <p>{{forecast[0].pres}} mb</p>
-
-                                        
-                                        <p class="degree_symbol">{{current.wind.degree}}</p>
-                                        
-
-                                        <p>{{current.rain}}</p>
-                                        <p>{{current.snow}}</p>
-
-                                        <p>{{time.moom}}</p>            
-
-                                        <h1>HOURLY</h1>
-                                        <h4>Hour 1</h4>
-                                        <p>{{hourly[0].isDaytime ? 'Day' : 'Night' }}</p>
-                                        <p>{{hourly[0].number}}</p>
-                                        <p>{{hourly[0].shortForecast}}</p>
-                                        <p>{{hourly[0].startTime}}</p>
-                                        <p class="degree_symbol">{{hourly[0].temperature}}</p>
-                                        <p>{{hourly[0].emperatureTrend}}</p>
-                                        <p>{{hourly[0].windSpeed}}</p>
-                                        <p>{{hourly[0].windDirection}}</p>
-
-
-
-        <script src="/js/script.js" type="module"></script>
+        <script src="/js/script.js"></script>
     </body>
 </html>

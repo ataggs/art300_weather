@@ -1,26 +1,149 @@
 .degree_symbol:not(:empty)::after {
     content: "°"
 }
-
+html{
+    background-image: 
+}
 .owm-legend-item{
     display: none;
 }
 
 #map {
-	width: 600px;
-    height: 600px;
+	width: 500px;
+    height: 400px;
+    border-radius: 15%;
+    margin-left: 30px;
+}
+img{
+    max-width: 100%;
 }
 .box_1{
     display: grid;
     grid-template-columns: 1fr 1fr;
+
 }
+.location_box{
+    background-color: #E8E8E8;
+    opacity: 77%;
+    height: 150px;
+    width: 500px; 
+    border-radius: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.city_location_box{
+    width: 320px;
+    height: 150px;
+    margin-top: 30px;
+}
+.forecast_prep_current{
+    text-align: center;
+    margin-top: 10px;
+}
+.forecast_prep_current_title{
+    text-align: center;
+    margin-top: 5px;
+   
+}
+.location_detail_rows{
+    width: 180;
+    height: 150px;
+    text-align: right;
+    margin-right: 15px;
+}
+
+.long_n_lat{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.time{
+    background-color: #E8E8E8;
+    opacity: 77%;
+    height: 107px;
+    width: 280px; 
+    border-radius: 5%;
+}
+
+p18{
+    color: #6A1212;
+}
+
+.sun_up_down{
+    background-color: #E8E8E8;
+    opacity: 77%;
+    height: 100px;
+    width: 223px; 
+    border-radius: 5%;
+}
+
+.high_n_low_forecast{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100px;
+    width: 240px;
+}
+.degree_symbol{
+    height: 100px;
+    width: 240;
+    grid-column-gap: 10px;
+    margin-top: 0;
+    padding-left: 20px;
+
+}
+.columne_2{
+    display: grid;
+    margin-top: -25%;
+}
+
+.h_l_box{
+    background-color: #E8E8E8;
+    opacity: 77%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: .2em; 
+    border-radius: 5%;
+    height: 47px;
+    width: 179px;
+    margin-left: 73%;
+    margin-top: -35%;
+}
+.temp_number_box{
+    width: 452px;
+    height: 285px;
+    text-align: center;
+    margin-left: 25%;
+    margin-top: 30%;
+  
+}
+.precip_box{
+    background-color: #E8E8E8;
+    opacity: 77%;
+    border-radius: 5%;
+    height: 126px;
+    width: 254px;
+}
+
+.it_feels_like{
+    background-color: #E8E8E8;
+    opacity: 77%;
+    border-radius: 5%;
+    width: 253px;
+    height: 67px;
+    margin-top: -6.7%;
+    margin-left: 65%;
+} 
+ 
+
 .box_2{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 1em;
 }
 .humidity{
     text-align: center;
-
 }
 .wind{
     text-align: center;
@@ -38,53 +161,93 @@
     text-align: center;
 }
 .background_icon{
-    text-align: center;
     background-color: #E8E8E8;
     opacity: 77%;
-    height: 126px;
-    width: 213px; 
-    
-    
+    height: 120px;
+    width: 190px; 
+    border-radius: 25%;
+    margin-left: 18%;
 }
 .forecast_for_the_week{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 2em;
+    margin-left: 1.75%;
 }
+
+.days_in_the_week{
+    background-color: #E8E8E8;
+    opacity: 77%;
+    height: 322px;
+    width: 240px;
+    border-radius: 5%;
+}
+
 .box_3{
     display: grid;
     grid-template-columns: 1fr 1fr;
-
 }
+
 h1{
     font-family: benton-modern-display-conden, serif;
     font-weight: 400;
     font-style: normal;
 }
+
 p{
     font-family: odisseia, sans-serif;
     font-weight: 400;
     font-style: normal;
 }
+
 p1{
     font-family: benton-modern-display-conden, serif;
     font-weight: 400;
     font-style: normal; 
     font-size: 1.5em;
 }
+
 p2{
     font-family: odisseia, sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 2em;
-    text-align: center
-
+    text-align: center;
+    
 }
+
 h4{
     font-family: benton-modern-display-conden, serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 2em; 
+    font-size: 1.5em; 
+    padding-left: 10%;
+    margin-top: 10px;
 }
+
+h5{
+    font-family: benton-modern-display-conden, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3em; 
+    color: #6E6E6E; 
+}
+
+h6{
+    font-family: benton-modern-display-conden, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3em; 
+}
+h8{
+    font-family: benton-modern-display-conden, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5em; 
+    margin-top: 10px;
+    padding-left: 5px;
+}
+
 p4{
     font-family: benton-modern-display-conden, serif;
     font-weight: 400;
@@ -96,4 +259,167 @@ p6{
     font-weight: 400;
     font-style: normal;
     font-size: .5em;
+}
+.four_space_grid{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 5px;
+    grid-row-gap: .5em;
+    margin-left: 13px;
+    
+}
+.grid_space_1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   
+}
+.cloud_coverage_forecast{
+    grid-column-gap: .5em;
+    height: 60px;
+    width: 100px;
+    background-color: #6A1212;
+    opacity: 78%;
+    border-radius: 5%;
+}
+
+.visibility_forecast{
+    grid-column-gap: .5em;
+    height: 60px;
+    width: 100px;
+    background-color: #6A1212;
+    opacity: 78%;
+    border-radius: 5%;
+}
+
+.grid_space_2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   
+}
+.precipitation_forecast{
+    grid-column-gap: .5em;
+    height: 60px;
+    width: 100px;
+    background-color: #6A1212;
+    opacity: 78%;
+    border-radius: 5%;
+}
+.uv_index_forecast{
+    grid-column-gap: .5em;
+    height: 60px;
+    width: 100px;
+    background-color: #6A1212;
+    opacity: 78%;
+    border-radius: 5%;
+}
+
+.icon-01d{
+    background-image: url("/img/01d.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    margin-left: 40%;
+    margin-top: -20%;
+}
+
+.icon-02d{
+    background-image: url("/img/02d.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    margin-left: 40%;
+    margin-top: -20%;
+}
+
+.icon-03d{
+    background-image: url("/img/03d.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    margin-left: 40%;
+    margin-top: -20%;
+}
+
+.icon-04d{
+    background-image: url("/img/04d.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    margin-left: 40%;
+    margin-top: -20%;
+}
+
+.icon-09d{
+    background-image: url("/img/09d.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    margin-left: 40%;
+    margin-top: -20%;
+}
+
+.icon-10d{
+    background-image: url("/img/10d.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    margin-left: 40%;
+    margin-top: -20%;
+}
+
+.icon-11d{
+    background-image: url("/img/11d.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    margin-left: 40%;
+    margin-top: -20%;
+}
+
+.icon-13d{
+    background-image: url("/img/13d.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    margin-left: 40%;
+    margin-top: -20%;
+}
+
+.icon-50d{
+    background-image: url("/img/50d.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    margin-left: 40%;
+    margin-top: -20%;
+}
+
+.icon{
+    width: 50px;
+    margin: auto;
+    margin-top: -20%;
+}
+
+.speed_n_direction{
+    display: grid;
+    grid-auto-rows: 1fr 1fr; 
+
 }

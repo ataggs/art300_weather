@@ -2,15 +2,27 @@
     content: "°"
 }
 html{
-    background-image: 
+    background-image: url(sky_blue_cloud_white_cloud_cloudy_landscape_day_cloudy_sky-647437.jpg!d.jpeg);
+    width: 100%;
+    height: 1000%;
+}
+.body{
+    
 }
 .owm-legend-item{
     display: none;
 }
 
+.forcast_cloud_coverage_number{
+    text-align: center;
+    color: white;
+    margin-top: -20%;
+    font-size: 1.25em;
+}
+
 #map {
-	width: 500px;
-    height: 400px;
+	width: 700px;
+    height: 600px;
     border-radius: 15%;
     margin-left: 30px;
 }
@@ -257,7 +269,7 @@ p18{
 }
 
 .cloud_coverage_number{
-    padding-top: 20%;
+    padding-top: 10%;
 }
 
 .current_air_number{
@@ -352,7 +364,7 @@ p4{
     font-family: benton-modern-display-conden, serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 10em;
+    font-size: 12em;
 }
 p6{
     font-family: benton-modern-display-conden, serif;

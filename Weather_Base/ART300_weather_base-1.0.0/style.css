@@ -2,9 +2,9 @@
     content: "°"
 }
 html{
-    background-image: url(sky_blue_cloud_white_cloud_cloudy_landscape_day_cloudy_sky-647437.jpg!d.jpeg);
-    width: 100%;
-    height: 1000%;
+    background-image: url("/img/sky.background.jpeg");
+   
+
 }
 .body{
     
